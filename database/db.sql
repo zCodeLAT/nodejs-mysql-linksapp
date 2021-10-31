@@ -1,7 +1,7 @@
 CREATE DATABASE database_links;
 
 USE database_links;
---users TABLE
+
 CREATE TABLE users(
   id INT(11) NOT NULL,
   username VARCHAR(16) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE links (
   description TEXT,
   user_id INT(11),
   created_at timestamp NOT NULL DEFAULT current_timestamp,
-  CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id);
+  CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 ALTER TABLE links

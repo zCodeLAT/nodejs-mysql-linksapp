@@ -4,7 +4,7 @@ const { promisify } = require('util'); //manejo de callbacks a promesas
 
 const { database } = require('./keys');
 
-const pool = mysql.createPool(database);
+const pool = mysql.createPool(database); //from ./keys.js
 
 pool.getConnection((err, connection)=> {
   if(err){
@@ -29,4 +29,4 @@ pool.getConnection((err, connection)=> {
 //Promisify pool requests
 pool.query = promisify(pool.query);
 
-module.exports = pool;
+module.exports = pool; 
