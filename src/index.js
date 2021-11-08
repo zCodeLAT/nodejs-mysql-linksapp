@@ -15,7 +15,7 @@ const app = express();
 require('./lib/passport');
 
 //settings (3th configuracion de hbs)
-app.set('port', process.env.PORT || 3000); //Variable de entorno asigna puerto
+app.set('port', 3000); //Variable de entorno asigna puerto
 app.set('views', path.join(__dirname, 'views')); //Views folder path
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
